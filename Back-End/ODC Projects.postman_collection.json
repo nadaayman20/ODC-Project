@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "a833522b-e420-4d73-af23-4ee2a5802984",
+		"name": "ODC Projects",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24896031"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "add User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fName\":\"nadaa\",\r\n    \"lName\":\"custmer\",\r\n    \"password\":\"12345678\",\r\n    \"email\" :\"nadaayman88@gmail.com\",\r\n    \"roleId\":\"63add0d3fda4da0075a381a2\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}user/addUser"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fName\":\"nadaa\",\r\n    \"lName\":\"custmer\",\r\n    \"password\":\"12345678\",\r\n    \"email\" :\"nadaayman88@gmail.com\",\r\n    \"roleId\":\"63add0d3fda4da0075a381a2\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}user/login"
+					},
+					"response": []
+				},
+				{
+					"name": "all User",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2IwNGY5ZGI2NDViNWEwMzhhZDliZTMiLCJpYXQiOjE2NzI0OTkxMTN9.8vLc4u_i87yTAitmq28j6RK3Ofr_wdI1IPsau5rfjrY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": "{{baseURL}}user/allUser"
+					},
+					"response": []
+				},
+				{
+					"name": "Profile",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2IwNGY5ZGI2NDViNWEwMzhhZDliZTMiLCJpYXQiOjE2NzI0OTkxMTN9.8vLc4u_i87yTAitmq28j6RK3Ofr_wdI1IPsau5rfjrY",
+								"type": "text"
+							}
+						],
+						"url": "{{baseURL}}user/profile/63b04f9db645b5a038ad9be3"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Url",
+			"item": [
+				{
+					"name": "add Url",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2IwNGY5ZGI2NDViNWEwMzhhZDliZTMiLCJpYXQiOjE2NzI0OTkxMTN9.8vLc4u_i87yTAitmq28j6RK3Ofr_wdI1IPsau5rfjrY",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n            \"link\":\"/profile/\",\r\n            \"methods\":\"GET\",\r\n            \"params\":[\"_id\"],\r\n            \"Roles\":[\r\n                      {\r\n                         \"roleId\":\"63add0d3fda4da0075a381a2\"\r\n                     }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}url/addUrl"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "add Role",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userType\":\"employee\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}role/addRole"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Building",
+			"item": [
+				{
+					"name": "add Building",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"buildingID\":3,\r\n   \"floor\":[1,2,3,4,5,6],\r\n   \"units\":[4]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}build/addBuilding"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Projects",
+			"item": [
+				{
+					"name": "add Project",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pName\":\"Shoubra\",\r\n    \"location\":[\r\n        {\"addressType\" :\"34 shoubra street\"}\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}project/addProject"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "{{baseURL}}url/profile/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{baseURL}}url/profile/"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3000/api/",
+			"type": "string"
+		}
+	]
+}
